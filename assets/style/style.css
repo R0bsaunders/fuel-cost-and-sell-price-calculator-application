@@ -1,0 +1,13 @@
+* {
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+    border: solid yellow 1px;
+    padding: 5px;
+}
+
+p {
+    display: inline;
+    background: white;
+    color: brown;
+}
