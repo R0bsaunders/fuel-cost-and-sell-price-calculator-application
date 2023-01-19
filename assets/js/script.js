@@ -24,9 +24,13 @@
 
 const h1 =  $('h1');
 const clientDropdown = $('select');
+const sellPrice = $('#sell');
 
-var selectedClient = [];
-
+var formEL = $('form');
+var buyPrice = $('input[name="buyPrice"]');
+var margin = $('input[name="margin"]');
+var liters = $('input[name="liters"]');
+var selectedClient = '';
 
 // ADD CLIENTS TO DROPDOWN
 
@@ -41,10 +45,10 @@ for (let i = 0; i < clients.length; i++) {
 }
 
 // EVENT LISTENER ON CLIENT
-clientDropdown.on('click', something);
+clientDropdown.on('click', selectClient);
 
 // Print client to H1
-function something(event) {
+function selectClient(event) {
     h1.text("Artic Calculator: " + $(event.target).val());
 
     // Store Only Selected Client Array in Variable
@@ -57,4 +61,33 @@ function something(event) {
 };
 
 //EVENT LISTER FOR FORMS
+$('form').on('submit', calculations);
 
+function calculations(event) {
+    event.preventDefault();
+
+    // Delivery Cost (ppl): Delivery Cost / liters ordered
+    var deliveryCost = (selectedClient.deliveryCost * 100) / ('Liters', liters.val())
+
+    // Cost per liter (ppl): Buy price + Margin + Delivery Cost
+    var costPerLiter = (('Buy Price', buyPrice.val()) + deliveryCost + ('Margin', margin.val()))/100
+
+    console.log("Delivery Cost (ppl) = " + deliveryCost);
+    console.log("Buy Price: " + ('Buy Price', buyPrice.val()));
+    console.log("PPL = " + costPerLiter);
+
+    sellPrice.text("Great")
+
+
+
+
+
+
+
+
+
+    // Total Margin: (Liters * Margin) /100
+    // Total Cost: (Cost per Liter * Liters) /100
+
+
+}    
