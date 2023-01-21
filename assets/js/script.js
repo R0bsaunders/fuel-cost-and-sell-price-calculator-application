@@ -27,9 +27,9 @@ const clientDropdown = $('select');
 const sellPrice = $('#sell');
 
 var formEL = $('form');
-var buyPrice = $('input[name="buyPrice"]');
-var margin = $('input[name="margin"]');
-var liters = $('input[name="liters"]');
+var buyPriceEL = $('input[name="buyPrice"]');
+var marginEL = $('input[name="margin"]');
+var litersEL = $('input[name="liters"]');
 var selectedClient = '';
 
 // ADD CLIENTS TO DROPDOWN
@@ -65,28 +65,27 @@ $('form').on('submit', calculations);
 
 function calculations(event) {
     event.preventDefault();
+    var buy = ('buyPrice', buyPriceEL.val());
+    var volume = ('liters', litersEL.val())
+    var margin = ('margin', marginEL.val())
+   
 
-    // Delivery Cost (ppl): Delivery Cost / liters ordered
-    var deliveryCost = (selectedClient.deliveryCost * 100) / ('Liters', liters.val())
+
+    // Delivery Cost (ppl): Delivery Cost / liters ordered * 100 for pennies
+    var delivery = (selectedClient.deliveryCost / volume) * 100
 
     // Cost per liter (ppl): Buy price + Margin + Delivery Cost
-    var costPerLiter = (('Buy Price', buyPrice.val()) + deliveryCost + ('Margin', margin.val()))/100
-
-    console.log("Delivery Cost (ppl) = " + deliveryCost);
-    console.log("Buy Price: " + ('Buy Price', buyPrice.val()));
-    console.log("PPL = " + costPerLiter);
-
-    sellPrice.text("Great")
-
-
-
-
-
-
-
-
+    var sell = Number(buy) + Number(margin) + Number(delivery);
+    sell = sell.toFixed(2);
+    
+    
+    // Print PPL to document
+    sellPrice.text(sell + " ppl + vat");
 
     // Total Margin: (Liters * Margin) /100
+    $('#totalProfit').text("£ " + (volume*margin)/100)
+
+
     // Total Cost: (Cost per Liter * Liters) /100
 
 
