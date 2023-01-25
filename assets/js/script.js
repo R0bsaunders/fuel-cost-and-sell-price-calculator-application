@@ -83,7 +83,7 @@ function calculations(event) {
     sellPrice.text(sell + " ppl + vat");
 
     // Total Margin: (Liters * Margin) /100
-    $('#totalProfit').text("£ " + (volume*margin)/100)
+    $('#totalProfit').text("£ " + (volume*(margin/100))
 
 
     // Total Cost: (Cost per Liter * Liters) /100
