@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
     <title>Document</title>
 </head>
 
 <body>
 
     <header>
-
-
+        <div id="overlay"></div>
         <div id="clientSelector">
 
-            <h2>Select Client</h2>
+            <h1>Select Client</h1>
             <select name="client" id="clientDropdown">
                 <option disabled="true">Select Client</option>
 
@@ -28,24 +28,30 @@
 
     <main>
 
-        <h1>Hello</h1>
+        <h2>Hello</h2>
         <div id="costingEL">
 
             <form id="requirements">
 
-                <div>
-                    <label for="buyPrice">Buy Price</label>
+                <div class="inputContainer">
                     <input type="number" id ="buyPrice" name="buyPrice" step=".01" placeholder="Buy Price (ppl)" />
+                    <i class="fa-solid fa-sterling-sign"></i> 
+                    <i class="fa-solid fa-sterling-sign"></i>
+                    <i class="fa-solid fa-sterling-sign"></i>
                 </div>
 
-                <div>
-                    <label for="margin">Margin</label>
+                <div class="inputContainer">
                     <input type="number" id ="margin" name="margin" step=".01" placeholder="Margin (ppl)" />
+                    <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                    <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                    <i class="fa-solid fa-circle-dollar-to-slot"></i>
                 </div>
 
-                <div>
-                    <label for="liters">Quantity</label>
+                <div class="inputContainer">
                     <input type="number" id ="liters" name="liters" placeholder="Liters Required" />
+                    <i class="fa-solid fa-gas-pump"></i>
+                    <i class="fa-solid fa-gas-pump"></i>
+                    <i class="fa-solid fa-gas-pump"></i>
                 </div>
 
                 <button id="calculate">Work it out!</button>

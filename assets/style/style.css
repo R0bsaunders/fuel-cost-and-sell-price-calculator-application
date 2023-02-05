@@ -1,14 +1,119 @@
 * {
-    background-color: black;
-    color: antiquewhite;
+    color: black;
     text-align: center;
-    border: solid grey 1px;
-    padding: 5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    margin: 0px;
 }
 
+body {
+    background-color: #E0CCCF;
+}
 p {
     display: inline;
     background: white;
     color: brown;
+}
+
+header {
+    background-image: url("/assets/images/Flexigrid-Truck_1.jpg");
+    min-height: 50vh;
+    background-repeat: no-repeat;
+    background-position: 10% 80%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    width: auto; /* Full width (cover the whole page) */
+    height: 50vh; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(25, 100, 100, 0.5); /* Black background with opacity */
+
+  }
+
+#clientSelector {
+    z-index: 1;
+    width: 45%;
+    height: 120px;
+    background-color: rgba(250, 250, 250, 0.6);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+}
+
+select {
+
+    /* styling */
+    background-color: white;
+    border: thin solid black;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+  
+    /* reset */
+  
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, black 50%),
+    linear-gradient(135deg, black 50%, transparent 50%),
+    radial-gradient(grey 70%, transparent 72%);
+background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - .5em) .5em;
+background-size:
+    5px 5px,
+    5px 5px,
+    1.5em 1.5em;
+background-repeat: no-repeat;
+}
+  
+select:focus {
+background-image:
+    linear-gradient(45deg, black 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, black 50%),
+    radial-gradient(gray 70%, transparent 72%);
+background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - .5em) .5em;
+background-size:
+    5px 5px,
+    5px 5px,
+    1.5em 1.5em;
+background-repeat: no-repeat;
+border-color: black;
+outline: 0;
+}
+
+#clientSelector select {
+    margin-top: 20px;
+    width: 50%;
+    height: 40px;
+}
+
+.inputContainer {
+    margin-top: 30px;
+
+
+}
+
+input {
+    height: 40px;
+    width: 50%;
+
 }
 
