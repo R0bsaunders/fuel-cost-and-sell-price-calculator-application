@@ -1,43 +1,85 @@
 const clients = [
+
     {
-        name: "Client 1",
+
+        name: "MD",
+
         deliveryCost: 501,
+
         terminal: "Plymouth"
+
     },
 
-    {
-        name: "Client 2", 
-        deliveryCost: 200,
-        terminal: "Plymouth"
-    },
+ 
 
     {
-        name: "Client 3",
-        deliveryCost: 549,
+
+        name: "BH",
+
+        deliveryCost: 216,
+
         terminal: "Plymouth"
+
     },
 
+ 
+
     {
-        name: "Client 4",
-        deliveryCost: 399,
+
+        name: "WT",
+
+        deliveryCost: 511,
+
+        terminal: "Plymouth"
+
+    },
+
+ 
+
+    {
+
+        name: "LAF",
+
+        deliveryCost: 431,
+
         terminal: "Avonmouth/Westerleigh"
+
     },
 
-    {
-        name: "Client 5",
-        deliveryCost: 455,
-        terminal: "Plymouth"
-    },
+ 
 
     {
-        name: "Client 6",
-        deliveryCost: 301,
+
+        name: "PH",
+
+        deliveryCost: 491,
+
         terminal: "Plymouth"
+
     },
 
+ 
+
     {
-        name: "Client 7",
-        deliveryCost: 474,
+
+        name: "V",
+
+        deliveryCost: 325,
+
         terminal: "Plymouth"
+
+    },
+
+ 
+
+    {
+
+        name: "DSS",
+
+        deliveryCost: 593,
+
+        terminal: "Plymouth"
+
     }
+
 ];
